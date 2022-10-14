@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Лабораторная работа №1</title>
+    </head>
+
+        <style>
+            .form {
+                display: block;
+                border-width: 1px;
+                border-color: black;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h2, img {
+                margin-left: 5%;
+            }
+
+            h3 {
+                margin-left: 3%;
+            }
+
+            img {
+                width: 35%;
+                height: 12%;
+                margin-bottom: 2%;
+            }
+
+            #elem1, #elem2 {
+                margin-left: 7%;
+                margin-bottom: 2%;
+                width: 220px;
+                height: 25px;
+            }
+
+            #butt {
+                margin-left: 8.2%;
+                font-size: medium;
+                color: rgb(0, 0, 0);
+                background-color: rgb(168, 217, 255);
+                width: 12%;
+                height: 5%;
+            }
+
+        </style>
+
+            <script>
+                function Poisk () {
+                    var x = document.getElementById('elem1').value;
+                    var val = document.getElementById('elem2').value;
+                    
+                    var sum = 0;
+
+                    function getFactorial(n) {
+                        let result = 1;
+                        while (n > 1) {
+                            result = result * n;
+                            n -= 1;
+                        }
+                        return result;
+                    }
+
+                    for (var n = 0; n <= val; n++) {
+                        var d1 = (2*n);
+                        var d2 = getFactorial(d1);
+
+                        var p1 = Math.pow(-1, n);
+                        var p2 = Math.pow(x, d1);
+
+                        var result = (p1 * p2) / d2;
+
+                        sum += result;
+
+                        document.getElementById('str').innerHTML = "Результат вычислений: " + sum;
+                    }
+                };
+            </script>
+
+                <body>
+                    <center><h1>Лабораторная работа №1</h1></center> <br>
+                    <h2>Дано:</h2> <br>
+                    <img src="LW_1.png" alt="задача">
+                    <br>
+
+                    <h2>Решение:</h2>
+
+                    <div class="form">
+                        <h3>Введите значение переменной "Х":</h3>
+                        <input id="elem1" type="text" name="quantity" placeholder="5">
+
+                        <br>
+
+                        <h3>Введите количество шагов:</h3>
+                        <input id="elem2" type="text" name="quantity" placeholder="2">
+                        <br>
+                        <input id="butt" type="button" onclick="Poisk()" value="Добавить значение" />
+                        <div id="str"></div>
+                    </div>
+                </body>
+</html>

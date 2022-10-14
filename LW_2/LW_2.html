@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Лабораторная работа №2</title>
+    </head>
+
+        <style>
+            p {
+                margin-left: 11.5%;
+                margin-bottom: 0.5%;
+                font-size: 16pt;
+            }
+
+            #elem {
+                margin-left: 7%;
+                margin-top: 1%;
+                margin-bottom: 2%;
+                width: 220px;
+                height: 25px;
+            }
+
+            #butt {
+                margin-left: 12%;
+                font-size: medium;
+                color: rgb(0, 0, 0);
+                background-color: rgb(168, 217, 255);
+                width: 12%;
+                height: 5%;
+            }
+
+            #status {
+                font-size: 13pt;
+                margin-left: 5%;
+            }
+
+        </style>
+
+            <script>
+                function Regexp () {
+                    var str = document.getElementById('elem').value;
+                    var status = document.getElementById("status");
+                    var regexp = /1\d\d\.1\d\d\.1\d\d\.1\d\d/;
+                    //var regexp = /(1[0-9][0-9])|(2[0-5][0-5])\.(1[0-9][0-9])|(2[0-5][0-5])\.(1[0-9][0-9])|(2[0-5][0-5])\.(1[0-9][0-9])|(2[0-5][0-5])/;
+                    if (regexp.test(str)) {
+                        status.innerHTML = "Адрес правильный";
+                        // alert(str.match(regexp) + "Адрес правильный");
+                        //alert(str.match(regexp));
+                        document.write(str.match(regexp));
+                    } else {
+                        status.innerHTML = "Адрес неверный";
+                        
+                        if(isEmpty(str)) status.innerHTML = "Поле пустое";
+                    }
+                    
+                    function isEmpty(str){
+                        return (str == null) || (str.length == 0);
+                    }
+                    // alert(str.match(regexp));
+                }
+            </script>
+
+            <body>
+                <center><h1>Лабораторная работа №2</h1></center> <br>
+                <form action="">
+                    <p>Введите строку:</p>
+
+                    <input id="elem" type="text" name="quantity"> <span id="status"></span>
+                    <br>
+                    <button id="butt" onclick="Regexp()">Рассчитать</button> 
+                </form>
+            </body>
+</html>
