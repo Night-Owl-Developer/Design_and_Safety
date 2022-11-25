@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab №5</title>
+    </head>
+        <script type="text/javascript">
+            var X = Number(prompt('Введите значение X'));
+            var browser, uAgent = navigator.userAgent;
+            if(uAgent.indexOf ("Chrome") > -1){
+                browser = 4*X-1;
+            }else if (uAgent.indexOf ("Firefox") > -1){
+                browser = -3*X+9;
+            }else if (uAgent.indexOf ("Opera") > -1){
+                browser = (X**2)-9;
+            }else if (uAgent.indexOf ("Microsoft Edge") > -1){
+                browser = 10*(X**2);
+            }
+            document.write(browser);
+        </script>
+    <body>
+
+    </body>
+</html>

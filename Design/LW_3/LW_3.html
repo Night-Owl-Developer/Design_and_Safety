@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Лабораторная работа №3</title>
+    </head>
+
+        <style>
+            p {
+                margin-left: 9%;
+                margin-bottom: 0.5%;
+                font-size: 16pt;
+            }
+
+            #elem, #elem2 {
+                margin-left: 7%;
+                margin-top: 1%;
+                margin-bottom: 2%;
+                width: 220px;
+                height: 25px;
+            }
+
+            #butt {
+                margin-left: 8%;
+                font-size: medium;
+                color: rgb(0, 0, 0);
+                background-color: rgb(168, 217, 255);
+                width: 12%;
+                height: 5%;
+            }
+
+            #status {
+                font-size: 13pt;
+                margin-left: 5%;
+            }
+
+        </style>
+
+            <script>
+                function createObject(Name, Value) {
+                    return {
+                        [Name] : Name,
+                        [Value] : Value,
+                        print() {
+                            console.log(`${Name} : ${Value}`);
+                        }
+                    }
+                }
+
+                var foot = prompt("Введите количество объектов");
+
+                for(var i = 1; i <= foot; i++){
+                    var a = prompt("Введите нвзвание свойства");
+                    var b = prompt("Введите значение свойства");
+
+                    var person = createObject(a, b);
+                    person.print();
+                }
+                // var a = prompt("Введите нвзвание свойства");
+                // var b = prompt("Введите значение свойства");
+
+                // var person = createObject(a, b);
+                // person.print();
+            </script>
+
+            <body>
+                <!-- <center><h1>Лабораторная работа №2</h1></center> <br>
+                <form action="">
+                    <p>Введите название свойства и его значение:</p>
+
+                    <input id="elem" type="text" name="quantity">
+                    <input id="elem2" type="text" name="quantity">
+                    <br>
+                    <button id="butt" onclick="createObject(a)">Добавить</button> 
+                    <button id="butt" onclick="Print()">Закончить</button> 
+                </form> -->
+            </body>
+</html>
