@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab №4</title>
+    </head>
+        <script>
+        function closeWindow () {
+            var window = open("https://knigavuhe.org/book/arkhiv-sherloka-kholmsa/", "Книга в ухе" , width = 600, height = 600);
+            window.focus(); // фокус на активном элементе
+            
+            setTimeout(() => cWindow(), 5000);
+
+            function cWindow(){
+                window.close();
+            }
+        }
+        </script>
+        <style>
+            #button {
+                width: 15%;
+                height: auto;
+                font-size: 28pt;
+                margin-left: 40%;
+                margin-right: auto;
+                margin-top: 20%;
+                margin-bottom: auto;
+                background-color: cornflowerblue;
+            }
+        </style>
+    <body>
+        <button id="button" onclick="closeWindow()">Открыть новое окно</button>
+    </body>
+</html>
