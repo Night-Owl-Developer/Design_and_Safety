@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function fons(){
+                var i1 = document.getElementById("i1").value
+                document.body.style.background = i1;
+            }
+
+            function text(){
+                var i2 = document.getElementById("i2").value
+            
+                var textcolor = document.getElementById("tc")
+                textcolor.style.color = i2;
+            }
+
+            function link(){
+                var i3 = document.getElementById("i3").value
+                var link = document.getElementById("link")
+                link.href = i3;
+            }
+        </script>
+
+        <style>
+            #one {
+                width: 290px;
+                height: 220px;
+                margin-left: 40%;
+                margin-right: auto;
+                margin-top: 15%;
+                background-color: rgb(186, 204, 235);
+                padding: 20px;
+            }
+
+            p {
+                font-size: 18pt;
+                margin: 2%;
+            }
+
+            input {
+                width: 200px;
+                height: 20px;
+                margin: 0;
+            }
+
+            button {
+                width: 70px;
+                height: 28px;
+                font-size: 14pt;
+                margin-left: 2%;
+                background-color: rgb(152, 183, 241);
+            }
+        </style>
+
+        <div id="one">
+            <p>Фон страницы</p>
+            <input id="i1" type="" name="">
+            <button onclick="fon()">ввести</button>
+
+            <p id="tc">Текст</p>
+            <input id="i2" type="" name="">
+            <button onclick="text()">ввести</button>
+            
+            <p>
+                <a id="link" href="#">Ссылка</a>
+            </p>
+            <input id="i3" type="" name="">
+            <button onclick="link()">ввести</button>
+        </div>
+    </body>
+</html>
